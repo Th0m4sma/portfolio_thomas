@@ -1,0 +1,510 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Honk&family=Oswald:wght@200..700&family=Radley:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Honk&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monda:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Radley:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.sessao1 {
+    background-color: rgb(131, 128, 128);
+    display: flex; /* Torna a .sessao1 um container flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: calc(100vh - 100px); /* Garante que a altura ocupe o restante da tela após o cabeçalho */
+    margin-top: -0px; /* Diminui a distância entre o cabeçalho e a sessão */
+}
+
+#introducao {
+    display: flex; /* Usa flexbox para organizar #texto e #foto em uma linha */
+    justify-content: space-between; /* Garante que o texto e a imagem ocupem o espaço disponível */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    gap: 20px; /* Espaço entre o texto e a imagem */
+    width: 1200px;
+    height: 550px;
+}
+
+#texto {
+    background-color: rgb(131, 128, 128);
+    text-align: justify;
+    padding: 20px;
+    padding-top: 90px;
+    width: 600px;
+    height: 550px;
+    font-size: 1.5em;
+    margin-left:50px;
+}
+#texto > h2{
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+#texto > p{
+    text-indent: 20px;
+}
+
+#foto {
+    margin: 10px 10px 10px 10px;
+    background-color: rgb(130, 125, 135);
+    flex-shrink: 0;
+    height: 530px;
+    width: 430px;
+}
+
+div#caixa_foto{
+    background-image: linear-gradient(to bottom, black,rgb(34, 27, 66));
+    height: 550px;
+    width: 450px;
+    margin-right: 30px;
+    border-radius: 4px;
+}
+
+#foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+.faixa_1 {
+    height: 5px;
+    background-image: linear-gradient(to bottom,rgb(74, 91, 115), #748575);
+    margin: 0px;
+}
+
+/* Estilo do título do projeto */
+.titulo_projeto {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0px 0px 0px 9px;
+    margin: 5px 0px 0px 0px; /* Adiciona espaçamento superior e inferior */
+}
+
+.titulo_projeto:hover {
+    color: #b0b6c0;
+    text-decoration: none; /* Garante que o sublinhado não apareça */
+}
+
+/* Lista de tecnologias */
+.slide ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0px 0px 0px 5px;
+    padding: 0;
+}
+
+.slide ul li {
+    font-size: 0.7em;
+    padding: 2px 2px;
+    background-color: #748575;
+    color: rgb(61, 59, 59);
+    border-radius: 7px;
+    margin: 0px 0px 0px 2px;
+    font-weight: bold;
+}
+
+/* Estilo do conteúdo do projeto */
+.conteudo_projeto {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.4em;
+    text-indent: 18px;
+    text-align: justify;
+    margin: 20px 5px 0px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    position: sticky;
+    top: 0; /* Fixa o header no topo */
+    min-height: 100px;
+    background-color: #010409;
+    color: white;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo do header */
+    border-bottom: 3px solid rgb(42, 41, 41); /* Define largura, estilo e cor da borda */
+    box-shadow: 1px 1px 3px black;
+
+ 
+    z-index: 1000;       /* Garante que o header ficará acima do carrossel */
+}
+
+nav {
+    display: flex; /* Torna o nav um container flexível */
+    justify-content: space-between; /* Distribui os itens principais (nome, menu, icones) */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100px; /* Define uma altura mínima */
+    background-color: #010409; /* Apenas para visualização */
+    width: 100%;
+    padding: 0 20px 0px 100px; /* Adiciona espaçamento lateral */
+}
+
+div.nvg {
+    display: flex; /* Torna cada seção flexível */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+div#nome {
+    text-align: left;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    width: auto; /* Garante que ocupe apenas o espaço necessário */
+    flex-shrink: 0;
+    font-size: 3em; /* Ajusta o tamanho do texto */
+    color: white; /* Cor do texto */
+    margin-left: -40px; /* Move o nome mais à esquerda */
+}
+
+div#menu {
+    flex-grow: 1; /* Faz o menu ocupar o espaço central */
+    justify-content: center; /* Centraliza os itens do menu */
+    display: flex;
+    margin-right: -100px;
+    font-size: 1.3em;
+}
+
+/* Estilo padrão para todos os links */
+nav a {
+    color: inherit; /* Herda a cor do pai */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    padding-bottom: 5px; /* Espaçamento para a linha de destaque */
+    position: relative; /* Necessário para a linha */
+}
+
+/* Remove o estilo de foco ou ativação do link */
+nav a:focus, nav a:active {
+    color: inherit; /* Herda a cor do pai, sem mudança para azul */
+    text-decoration: none; /* Garante que não haja sublinhado */
+}
+
+/* Linha abaixo do link */
+nav > div#menu a::after {
+    content: ""; /* Cria a linha */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Inicia no meio */
+    width: 0; /* Começa sem largura */
+    height: 2px; /* Altura da linha */
+    background-color: rgb(246, 246, 246); /* Cor da linha */
+    transition: width 0.3s ease, left 0.3s ease; /* Anima a largura e a posição */
+    transform: translateX(-1%); /* Centraliza a linha no meio */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav > div#menu a:hover::after {
+    width: 100%; /* A linha se estende até os cantos */
+    left: 0; /* Move a linha para a posição inicial */
+    transition: width 0.3s ease, left 0.3s ease; /* Anima a largura e a posição */
+}
+
+/* Garantir que nenhum sublinhado ou cor mude ao passar o mouse */
+nav > div#menu a:hover {
+    color: inherit; /* Garante que a cor não mude para azul */
+    text-decoration: none; /* Remove qualquer sublinhado ou decoração */
+}
+
+#icones li:nth-child(2) img { /* O GitHub é o segundo item da lista */
+    width: 36px; /* Ajuste o tamanho da imagem para 40px (você pode mudar conforme necessário) */
+    height: auto; /* Mantém a proporção da imagem */
+    padding-top: 7px;
+}
+
+div#icones img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o ícone ao passar o mouse */
+}
+
+div#icones {
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    display: flex;
+    gap: 10px; /* Espaçamento entre os ícones */
+}
+
+/* Ajustando itens lista de navegação*/
+nav > div > ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinha os itens da lista em linha */
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+nav > div > ul > li {
+    display: inline-block;
+    padding: 0px 20px 0px 0px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-right: 20px; 
+    text-align: center; /* Centraliza o texto dentro dos botões */
+}
+
+/* Ajustando Icones */
+
+div#icones > ul > li {
+    padding: 0; /* Remove o padding dos itens de `#icones` */
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: inline-block; /* Deixa os itens na mesma linha */
+    margin-right: 0px; /* Espaço entre os ícones */
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+div#icones > ul >li img {
+    width: 50px; /* Ajuste o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    vertical-align: middle; /* Centraliza os ícones verticalmente */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorção */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin-top: 100px;
+    height: 200px;
+    background-color: #292727;
+    color: #545151;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #292727; /* Cor do fundo */
+    border-top: 2px solid #ccc; /* Linha no topo do footer */
+}
+
+.footer-left {
+    font-family: Arial, sans-serif;
+    margin-left: 30px;
+}
+
+.footer-left h3 {
+    margin: 0;
+    color: #545151; /* Cor do título */
+}
+
+.footer-left p {
+    margin: 5px 0 0;
+    color: #545151; /* Cor do texto */
+    font-size: 0.9rem;
+}
+
+.footer-right ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaço entre os itens */
+    padding: 0;
+    margin-right: 70px;
+}
+
+.footer-right li {
+    font-size: 0.9rem;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #4a4d50; /* Cor do link */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #9a9b9c; /* Cor ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#projetos > h2{
+    color: #010409;
+    margin-top: 60px;
+    font-weight: bolder;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    font-size: 3.0em;
+    height: 20px;
+}
+
+div#contato > h2 {
+    color: #010409;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin-top: 120px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 3.0em;
+    height: 20px;
+}
+
+#linha {
+    background-color: #010409;
+    height: 4px;
+    width: 240px;
+    align-items: center;
+    border-radius: 7px 0px 7px 0px;
+    margin: 30px auto 5px auto; /* Adiciona espaçamento superior, centraliza horizontalmente, e mantém margin-bottom 0 */
+
+}
+
+#faixa{
+    background-color: #010409;
+    height: 2px;
+}
+
+.descricao{
+    font-family: 'Lato';
+    text-align: center;
+    margin-top: 0px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilo geral do container */
+#enviar-mail {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9; /* Fundo claro para contraste */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais destacada */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte mais moderna */
+    height: auto; /* Ajusta automaticamente a altura */
+    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+}
+
+/* Estilo para os rótulos (labels) */
+#enviar-mail label {
+    font-weight: bold;
+    font-size: 1.44rem; /* Aumenta o tamanho da fonte para melhor legibilidade */
+    color: #333; /* Texto em cinza-escuro */
+    display: block;
+    margin-bottom: 8px; /* Espaçamento entre o label e o campo */
+}
+
+/* Estilo dos inputs e textarea */
+#enviar-mail input,
+#enviar-mail textarea {
+    width: 100%; /* Preenche o espaço disponível */
+    padding: 12px; /* Maior espaçamento interno para conforto */
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Borda clara */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    font-size: 1.4rem;
+    color: #333;
+    background-color: #fff; /* Fundo branco */
+    transition: all 0.3s ease; /* Transição suave para bordas e fundo */
+}
+
+/* Foco nos inputs e textarea */
+#enviar-mail input:focus,
+#enviar-mail textarea:focus {
+    border-color: #007bff; /* Azul ao focar */
+    outline: none;
+    background-color: #eaf4ff; /* Fundo azul claro ao focar */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Sombra azul suave */
+}
+
+/* Estilo do botão de envio */
+#enviar-mail button {
+    background-color: #007bff; /* Azul */
+    color: white; /* Texto branco */
+    padding: 14px 24px; /* Maior padding para o botão */
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    text-transform: uppercase; /* Texto em caixa alta */
+    border: none;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições para fundo e sombra */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efeito ao passar o mouse no botão */
+#enviar-mail button:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.5); /* Sombra mais destacada */
+}
+
+/* Efeito ao passar o mouse no container */
+#enviar-mail:hover {
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2); /* Sombra mais forte ao passar o mouse no container */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    #enviar-mail {
+        padding: 15px;
+    }
+
+    #enviar-mail button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+#enviar-mail textarea {
+    height: 120px; /* Aumenta a altura da caixa de mensagem */
+    resize: vertical; /* Permite redimensionar verticalmente */
+}

@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar linha se necessário */
+    width: 100%;
+
+    margin-top: 40px;
+    margin-bottom: 100px;
+    gap: 50px;
+}
+
+.slide{
+    width: 350px;
+    height: 470px;
+    border-radius: 6px 3px 6px 3px;
+    border:3px solid #181818;
+    box-shadow: 1px 1px 3px #515151;
+    background-color: #6d6d6d;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove sublinhado do link */
+    color: inherit; /* Mantém a cor do texto */
+}
+
+.slide:hover {
+    transform: translateY(-10px); /* Move o slide levemente para cima */
+    border-color: #93979c; /* Muda a cor da borda */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    background-color: #7e8c8e; /* Leve mudança no fundo */
+}
+
+.slide > img{
+    width: 100%;
+    height: 140px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.faixa_1 {
+    height: 5px;
+    background-image: linear-gradient(to bottom,rgb(74, 91, 115), #748575);
+}
+
+/* Estilo do título do projeto */
+.titulo_projeto {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0px 0px 0px 9px;
+    margin: 5px 0px 0px 0px; /* Adiciona espaçamento superior e inferior */
+}
+
+.titulo_projeto:hover {
+    color: #b0b6c0;
+    text-decoration: none; /* Garante que o sublinhado não apareça */
+}
+
+/* Lista de tecnologias */
+.slide ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0px 0px 0px 5px;
+    padding: 0;
+}
+
+.slide ul li {
+    font-size: 0.7em;
+    padding: 2px 2px;
+    background-color: #748575;
+    color: rgb(61, 59, 59);
+    border-radius: 7px;
+    margin: 8px 0px 0px 4px;
+    font-weight: bold;
+}
+
+/* Estilo do conteúdo do projeto */
+.conteudo_projeto {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.4em;
+    text-indent: 18px;
+    text-align: justify;
+    margin: 15px 5px 0px 5px;
+}
+
+
+
+
+.last-slide {
+    background: linear-gradient(135deg, #6d6d6d, #b3b3b3);
+    color: #ffffff; /* Texto branco para contraste */
+    border: 4px dashed #484747; /* Borda em estilo dashed para diferenciar */
+    text-align: center; /* Centraliza o conteúdo */
+    font-style: italic; /* Dá um tom diferenciado ao texto */
+    position: relative;
+}
+
+.last-slide .titulo_projeto {
+    margin-top: 100px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.last-slide .conteudo_projeto {
+    font-size: 1.2em;
+    font-style: normal;
+    text-align: center;
+    padding: 10px;
+}
+
+.last-slide::after {
+    content: "Mais projetos em breve...";
+    font-size: 1em;
+    color: #5b5757;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+
+footer {
+    background-color: #292727;
+    color: #6a6666;
+    padding: 0.5px;
+    text-align: center;
+    margin-top: auto; /* Isso vai empurrar o rodapé para o final */
+}

@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+div#skill_certificados {
+    margin: 10px 10px 0px 10px;
+    height: 500px;
+    width: 1200px;
+    background-color: rgba(215, 212, 212, 0.79);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+div#skills {
+    margin-left: 50px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-content: flex-start; /* Alinha as linhas no topo */
+    gap: 10px; /* Espaço entre os itens */
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 1.5em; /* Ajusta o tamanho do título */
+    font-weight: bold;
+}
+
+div.ferramenta {
+    font-size: 0.9em;
+    background-color: rgb(186, 182, 182);
+    font-weight: 600;
+    color: rgb(65, 65, 65);
+    width: 140px; /* Ajuste para caber 3 por linha */
+    height: 30px;
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+}
+
+div.ferramentas-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite várias linhas */
+    justify-content: space-around; /* Distribui os itens uniformemente */
+    width: 100%; /* Garante que as ferramentas ocupem toda a largura disponível */
+}
+
+div#certificados{
+    height: 500px;
+    width: 500px;
+}
+
+img.verificado{
+    height: 15px;
+    width: 15px;
+}
+
+img.verificado2{
+    height: 12px;
+    width: 12px;
+}
+
+div.curso{
+    padding: 6px;
+}
+
+a {
+    color: #090909;  /* Cor suave para os links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1em;
+}
+
+a:hover {
+    color: #08405e; /* Escurece a cor quando o mouse passa sobre o link */
+    font-weight: 500;
+}
+
+a:focus {
+    outline: none; /* Remove o contorno quando o link é clicado */
+}
+
+
+
+
+
+
+footer {
+    background-color: #292727;
+    color: #6a6666;
+    padding: 0.5px;
+    text-align: center;
+    margin-top: auto; /* Isso vai empurrar o rodapé para o final */
+}
+
+div#historia{
+    width: 70%;
+    height: 300px;
+    margin: 10px 10px 50px 10px;
+    background-color: rgba(215, 212, 212, 0.79);
+    text-align: center;
+}
+
+
+
+
+
+
+
+#situacao_atual {
+    background-color: rgba(215, 212, 212, 0.79); /* Fundo suave */
+    padding: 20px;
+    border-radius: 10px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+#situacao_atual h2 {
+    font-size: 2em;
+    color: #2e3d48;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+}
+
+#situacao_atual h2::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #3498db;
+    bottom: -10px;
+    left: 25%;
+}
+
+.situacao {
+    background-color: rgb(196, 191, 191);
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 75%;
+    padding-left: 50px;
+    text-align: justify;
+}
+
+.situacao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.situacao h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+}
+
+.situacao h3::before {
+    content: "📚"; /* Ícone representativo */
+    margin-right: 10px;
+}
+
+.situacao p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.situacao p strong {
+    font-weight: bold;
+}
+

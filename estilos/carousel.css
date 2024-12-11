@@ -1,0 +1,212 @@
+/* Slider */
+
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.row {
+    background-color: rgba(215, 212, 212, 0.79);
+    padding: 2% 0;
+    height: 500px;
+    position: relative; /* Necessário para o posicionamento das setas */
+    max-width: 100%;
+    
+}
+
+/* Contêiner do carrossel */
+.customer-logos {
+    position: relative; /* Necessário para posicionar as setas dentro do contêiner */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    max-width: 100%; /* Limita a largura do carrossel à largura do contêiner */
+    z-index: 1;  /* Garante que o carrossel fique atrás do header */
+    margin-left: 40px;
+}
+
+/* Estilo das imagens */
+.slick-slide img {
+    width: 100%; /* Ajuste conforme necessário */
+    height: 140px;
+}
+
+/* Estilização das setas de navegação */
+.slick-prev, .slick-next {
+    font-size: 30px;
+    color: #333;
+    z-index: 10; /* Define que as setas estarão acima das imagens */
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.6); /* Coloca um fundo leve nas setas para visibilidade */
+    padding: 10px; /* Ajusta o tamanho das setas */
+}
+
+/* Hover para as setas */
+.slick-prev:hover, .slick-next:hover {
+    color: #000;
+}
+
+
+.slick-prev,
+.slick-next {
+    background: none; /* Remove fundo padrão */
+    border: none; /* Remove bordas */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slick-prev {
+    left: -50px; /* Ajuste a posição horizontal da seta esquerda */
+}
+
+.slick-next {
+    right: -50px; /* Ajuste a posição horizontal da seta direita */
+}
+
+.slick-prev img,
+.slick-next img {
+    width: 50px; /* Ajuste o tamanho da imagem */
+    height: auto;
+}
+
+ /* Estilo padrão das divs */
+ .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #565555;
+    background-color: #6d6d6d;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */ /* Reduz a visibilidade das divs laterais */
+    transform: scale(0.8); /* Reduz o tamanho das divs laterais */
+    height: 450px;
+    width: 370px;
+    border-radius: 6px 3px 6px 3px;
+    box-shadow: 1px 1px 3px #515151;
+}
+
+
+/* Div central em foco */
+.slick-center {
+    transform: scale(1.0); /* Aumenta o tamanho da div central */
+    opacity: 1; /* Total visibilidade */
+    z-index: 10; /* Eleva a prioridade do item central */
+    border-color: #0b0b0b; /* Destaque na borda da div central */
+}
+
+/* Divs adjacentes (opcional: mais visíveis que as do canto extremo) */
+.slick-slide:not(.slick-center) {
+    transform: scale(0.6); /* Diminui ainda mais os itens das laterais */
+    opacity: 0.3; /* Deixa ainda menos visível */
+}

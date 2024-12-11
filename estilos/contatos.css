@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* Garante que as imagens dentro dos links não aumentem ao serem clicadas */
+a img {
+    max-width: 200px; /* Limita a largura máxima para 150px */
+    max-height: 200px; /* Limita a altura máxima para 150px */
+}
+
+section {
+    border: 9px solid rgb(65, 64, 64);
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 1270px; /* A altura da section será 100% da altura da tela */
+    width: 950px; /* Largura fixa para a section */
+    margin: 20px auto; /* Centraliza a section horizontalmente */
+    background-color: grey;
+    border-radius: 30px;
+}
+
+.tipo {
+    height: 250px;
+    display: flex; /* Faz com que as divs internas fiquem na mesma linha */
+    align-items: center; /* Alinha as divs verticalmente no centro */
+    gap: 2px; /* Menos espaço entre o texto e a imagem */
+}
+
+.texto {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 0px;
+    flex: 1;
+    font-size: 1em; /* Aumenta o tamanho do texto */
+    line-height: 1.5; /* Melhora o espaçamento entre as linhas do texto */
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.texto > h2 {
+    font-size: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.imagem1 {
+    height: 100%; /* Faz a altura da imagem ocupar toda a altura da div */
+    width: 100%;  /* Faz a largura da imagem ocupar toda a largura da div */
+    max-width: 150px; /* Limita a largura máxima para 150px */
+    max-height: 150px; /* Limita a altura máxima para 150px */
+    margin-right: 0px;
+    margin-left: 40px;
+    border-radius: 50%;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem2{
+    height: 100%; /* Faz a altura da imagem ocupar toda a altura da div */
+    width: 100%;  /* Faz a largura da imagem ocupar toda a largura da div */
+    max-width: 150px; /* Limita a largura máxima para 150px */
+    max-height: 150px; /* Limita a altura máxima para 150px */
+    margin-right: 40px;
+    margin-left: 0px;
+    border-radius: 50%;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem1:hover img, .imagem2:hover img {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem para 110% */
+}
+
+div > img {
+    width: 100%; /* Faz a imagem ocupar toda a largura da div */
+    height: 100%; /* Faz a imagem ocupar toda a altura da div */
+    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorcer */
+}
+
+/* Links dentro do conteúdo */
+.email-link,
+.texto a,
+.texto a:visited {
+    color: #134f8b; /* Cor azul para links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.email-link:hover,
+.texto a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    color: #005bb5; /* Mudança de cor ao passar o mouse */
+}
+
+#diminuir > a > img{
+    max-width: 150px; /* Limita a largura máxima para 150px */
+    max-height: 150px; /* Limita a altura máxima para 150px */
+}
+
+#diminuir_mais > a > img{
+    max-width: 130px; /* Limita a largura máxima para 150px */
+    max-height: 130px; /* Limita a altura máxima para 150px */
+}
+
+footer {
+    background-color: #292727;
+    color: #6a6666;
+    padding: 0.5px;
+    text-align: center;
+    margin-top: auto; /* Isso vai empurrar o rodapé para o final */
+}
